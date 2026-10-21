@@ -8,5 +8,12 @@ assert.equal(data.length,40);assert.equal(new Set(data.map(d=>d[0])).size,40);
 active='food';render();assert(document.getElementById('entries').innerHTML.includes('台灣陳'));
 search.value='zznotfound';render();assert(document.getElementById('entries').innerHTML.includes('清除搜尋'));
 active='all';search.value='樂田';render();assert(document.getElementById('entries').innerHTML.includes('樂田活版'));
-console.log('PASS: 40 unique entries; category filter, name search, empty state, script execution.');
+assert.equal(paletteEvidence.length,40);assert.equal(paletteEvidence.filter(p=>p[0].length).length,26);
+for(const p of paletteEvidence){assert(p[2]);assert.equal(p[0].length,p[3].length);for(const id of p[0])assert(colorGroups.some(c=>c[0]===id));}
+active='food';activeColor='green';search.value='';render();assert.equal(data.filter(d=>baseMatches(d)&&matchesColor(d)).length,1);assert(document.getElementById('entries').innerHTML.includes('台灣陳沙茶火鍋'));assert(!document.getElementById('entries').innerHTML.includes('東海排骨'));
+active='all';activeColor='unknown';render();assert.equal(data.filter(d=>baseMatches(d)&&matchesColor(d)).length,14);assert(document.getElementById('entries').innerHTML.includes('主要照片中的招牌可讀為另一店名'));
+activeColor='blue';search.value='春水堂';render();assert.equal(data.filter(d=>baseMatches(d)&&matchesColor(d)).length,1);
+search.value='沒有這家店';render();assert(document.getElementById('entries').innerHTML.includes('id="reset"'));
+clearAll();assert.equal(active,'all');assert.equal(activeColor,'all');assert.equal(search.value,'');assert(document.getElementById('result-count').innerHTML.includes('40 個地點'));
+console.log('PASS: 40 unique entries; 26 observed palettes + 14 unknowns; combined category/color/search; multi-color membership; empty state; reset.');
 `,{document,assert,console});
