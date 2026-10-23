@@ -3,9 +3,9 @@ Read-mode directory. User requested a warmer palette on 2026-10-22. Cream paper 
 Noto Serif TC title 40–64px; Noto Sans TC body 15px, entry names 19px, descriptions 13px. Max content width 1180px. Two columns with 46px gutter, one column below 700px. Mobile 24px side padding. Native inline disclosure, no modal. Text and dots identify categories; never rely on color alone.
 Search combines with selected category and one selected visual-color group. A store can match several color groups. Color counts reflect the current category and query, independent of the selected color. Zero-result color options are disabled unless already selected. Clear resets all three conditions; unknown palettes are filterable. Metadata and color labels are at least 12px.
 
-All 40 Maps primary pictures were visually checked on 2026-10-22: 26 provide legible logo, shop-name signage or entrance lettering; 14 remain unconfirmed. Source type, observation note, approximate swatches and map-source link are available in each entry. Color chips are visual estimates, never official brand standards or pixel extraction. Photo decor, products, promotional banners and unrelated historic plaques do not establish brand colors. Preserve unknown status when evidence is insufficient.
+Current collection: 39 Taichung entries. Photos were visually checked on 2026-10-22: 25 provide legible logo or shop-name signage; 14 remain unconfirmed. Source type, observation note, approximate swatches and map-source link are available in each entry. Color chips are visual estimates, never official brand standards or pixel extraction. Photo decor, products, promotional banners and unrelated historic plaques do not establish brand colors. Preserve unknown status when evidence is insufficient.
 
-Maps search links open a new tab. 40 entries retained, including a labeled Chiayi location. Descriptions are editorial interpretations of names and map types, not historical claims. No photography or illustration is republished.
+Maps search links open a new tab. 39 entries retained, all in Taichung. The Chiayi entry and its paired palette evidence were removed on 2026-10-23 at the user’s request. Descriptions are editorial interpretations of names and map types, not historical claims. No photography or illustration is republished.
 
 ## Responsive behavior
 
