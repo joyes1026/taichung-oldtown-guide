@@ -2,7 +2,9 @@
 
 以 Google 地圖「台中舊城特色店家」共用清單為基礎的介紹式網站，保留全部 40 個地點。
 
-[開啟已發佈網站](https://taichung-oldtown-finds.joye1026a.chatgpt.site)（私人網站，需獲授權的 ChatGPT 帳號登入）
+[直接開啟網站](https://joyes1026.github.io/taichung-oldtown-guide/)
+
+這是獨立的靜態 HTML 網站，由 GitHub Pages 直接提供，不需 ChatGPT 帳號或任何後端服務。
 
 ## 功能
 
@@ -13,7 +15,7 @@
 
 ## 本機使用
 
-此專案使用 HTML、CSS 與 JavaScript，不需安裝第三方套件。直接開啟 `dist/index.html` 即可瀏覽。
+此專案使用 HTML、CSS 與 JavaScript，不需安裝第三方套件。下載後直接開啟根目錄的 `index.html` 即可瀏覽。
 
 若已安裝 Node.js，也可以啟動本機預覽：
 
@@ -33,11 +35,15 @@ npm test
 
 ## 檔案
 
-- `dist/index.html`：可直接部署的完整網站，店家與色系資料也在此檔案。
+- `index.html`：可直接開啟與部署的完整網站；CSS、JavaScript、店家與色系資料皆在此檔案。
+- `.nojekyll`：讓 GitHub Pages 直接提供 HTML，不將說明文件或樣板當作首頁。
 - `preview.cjs`：僅限本機的靜態預覽。
 - `check.cjs`：功能檢查。
 - `DESIGN.md`：介面與配色紀錄。
-- `.openai/hosting.json`：既有 Sites 網站的部署設定。
+
+## GitHub Pages
+
+發布來源為 `main` 分支的 `/ (root)`。推送更新後，GitHub Pages 會自動重新發布根目錄的 `index.html`。網站不會重新導向其他託管平台。
 
 ## 資料來源與範圍
 

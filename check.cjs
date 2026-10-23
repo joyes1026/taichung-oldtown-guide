@@ -1,5 +1,5 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
-const html=fs.readFileSync('dist/index.html','utf8');
+const html=fs.readFileSync('index.html','utf8');
 const code=html.match(/<script>([\s\S]*?)<\/script>/)[1];
 const els={};function el(){return {innerHTML:'',value:'',addEventListener(){},classList:{toggle(){}},querySelector(){return {focus(){}}},focus(){}};}
 const document={querySelectorAll(){return []},getElementById(id){return els[id]??=el()}};
