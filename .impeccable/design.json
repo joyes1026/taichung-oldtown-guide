@@ -1,1 +1,41 @@
-{"mode":"read","colors":{"surface":"#fbf4e8","text":"#49372e","secondary":"#796554","accent":"#985038","border":"#dfcdb6","detail":"#f4e7d5","selectedColor":"#f0d9bf"},"categoryColors":{"food":"#9b492f","cafe":"#78592b","culture":"#546c48","vintage":"#6c5681","craft":"#49667a","place":"#675e35"},"typography":{"display":"Noto Serif TC","body":"Noto Sans TC","minimumMetadataSize":12},"layout":{"maxWidth":1180,"mobileBreakpoint":700,"mobilePadding":24},"paletteEvidence":{"observedOn":"2026-10-22","classified":26,"unknown":14,"method":"visual approximation of legible Maps logo/signage, not official brand standards"}}
+{
+  "mode": "read",
+  "colors": {
+    "surface": "#fbf4e8",
+    "text": "#49372e",
+    "secondary": "#796554",
+    "accent": "#985038",
+    "border": "#dfcdb6",
+    "detail": "#f4e7d5",
+    "selectedColor": "#f0d9bf"
+  },
+  "categoryColors": {
+    "food": "#9b492f",
+    "cafe": "#78592b",
+    "culture": "#546c48",
+    "vintage": "#6c5681",
+    "craft": "#49667a",
+    "place": "#675e35"
+  },
+  "typography": {
+    "display": "Noto Serif TC",
+    "body": "Noto Sans TC",
+    "minimumMetadataSize": 12,
+    "mobileReadingSize": 16
+  },
+  "layout": {
+    "maxWidth": 1180,
+    "mobileBreakpoint": 700,
+    "mobilePadding": 20,
+    "entrySingleColumnBreakpoint": 760,
+    "narrowBreakpoint": 360,
+    "narrowPadding": 16,
+    "touchTargetMinimum": 44
+  },
+  "paletteEvidence": {
+    "observedOn": "2026-10-22",
+    "classified": 26,
+    "unknown": 14,
+    "method": "visual approximation of legible Maps logo/signage, not official brand standards"
+  }
+}

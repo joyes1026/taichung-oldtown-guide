@@ -6,3 +6,7 @@ Search combines with selected category and one selected visual-color group. A st
 All 40 Maps primary pictures were visually checked on 2026-10-22: 26 provide legible logo, shop-name signage or entrance lettering; 14 remain unconfirmed. Source type, observation note, approximate swatches and map-source link are available in each entry. Color chips are visual estimates, never official brand standards or pixel extraction. Photo decor, products, promotional banners and unrelated historic plaques do not establish brand colors. Preserve unknown status when evidence is insufficient.
 
 Maps search links open a new tab. 40 entries retained, including a labeled Chiayi location. Descriptions are editorial interpretations of names and map types, not historical claims. No photography or illustration is republished.
+
+## Responsive behavior
+
+2026-10-23: entry lists use one column at 760px and below. At 700px and below, primary reading text and search input are 16px, category controls form two columns, and color controls form three columns (two below 360px). Buttons are at least 44px tall; mobile filters are 46px. Metadata remains 12–14px. Long shop names wrap inside a flexible span. Mobile result summary stays visible while reading entries. Header, links and footer respect safe-area insets; search input avoids the iOS focus-zoom threshold. Tablet controls remain touch-sized. Browser previews checked at 320px, 390px, 768px and desktop width; physical-device Safari/Android testing was not available.

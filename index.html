@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>舊城慢慢逛｜台中特色店家指南</title>
 <meta name="description" content="從一杯咖啡、一間書店開始，探索台中舊城特色店家。40 個地點，六種逛法，找到今天想去的地方。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,65 @@
 
 .color-section{margin:0 0 25px;padding:22px 0 23px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .color-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:9px}.color-heading h3{font-size:14px;font-weight:500;margin:0}.color-heading button{font-size:12px}.color-help{font-size:12px;line-height:1.8;color:var(--muted);margin:0 0 15px}.color-filters{display:flex;flex-wrap:wrap;gap:8px}.color-filter{display:inline-flex;align-items:center;gap:7px;border:1px solid #cbb59b;border-radius:6px;background:transparent;color:var(--ink);padding:7px 11px;font-size:12px;transition:background .15s,border-color .15s}.color-filter:hover{background:#f3e5d2;border-color:var(--green)}.color-filter[aria-pressed=true]{background:#f0d9bf;border-color:#985038;box-shadow:inset 0 0 0 1px #985038}.color-filter:disabled{opacity:.4;cursor:default}.color-filter .count{font-size:12px;font-variant-numeric:tabular-nums}.swatch{width:13px;height:13px;display:inline-block;border-radius:50%;background:var(--swatch);box-shadow:inset 0 0 0 1px #49372e35;flex-shrink:0}.swatch-unknown{background:none;position:relative}.swatch-unknown:after{content:'';position:absolute;left:6px;top:2px;width:1px;height:9px;background:#7a6a5b;transform:rotate(45deg)}.shop-palette{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:13px 0 15px;font-size:12px;color:var(--muted)}.shop-palette .swatch{width:11px;height:11px}.palette-type{margin-left:auto;font-size:12px;color:var(--muted)}.palette-detail{padding-top:12px;margin-top:12px;border-top:1px solid #d9c2a6}.palette-detail strong{font-weight:500;color:var(--ink)}.palette-detail small{font-size:12px;color:var(--muted)}.results-bar{border-bottom:0;padding-bottom:14px}.filters{margin-bottom:20px}.entry-top .category{font-size:12px}.reset:disabled{opacity:.45;cursor:default}.palette-unknown{color:#796554}@media(max-width:700px){.color-filter{padding:8px 10px}.color-section{padding:18px 0 20px}.color-help{max-width:36ch}.palette-type{margin-left:4px}.color-filters{gap:7px}}
+/* Responsive layout and touch controls */
+.intro>*,.tools>*,.entry-top>*,.entry-bottom>*,footer>*{min-width:0}
+.shop-name{min-width:0;overflow-wrap:anywhere}
+details summary{overflow-wrap:anywhere}
+.detail,.description,.kind,footer p{overflow-wrap:anywhere}
+button,a,summary{touch-action:manipulation}
+button:active{transform:translateY(1px)}
+.search input{font-size:16px;min-height:28px}
+@media(min-width:701px) and (max-width:1023px){
+ .wrap{padding-inline:28px}.intro{gap:30px;padding-block:42px 36px}
+ h1{font-size:clamp(36px,5vw,48px)}.entries{column-gap:30px}
+ .tools{gap:20px}.search{width:260px;flex-shrink:0}
+ .filter,.color-filter{min-height:44px}.entry-bottom a{min-height:44px}
+}
+@media(max-width:760px){.entries{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:700px){
+ body{font-size:16px;-webkit-text-size-adjust:100%}
+ .wrap{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+ header{min-height:68px;gap:12px}.brand{font-size:14px;letter-spacing:.06em;flex-shrink:0}
+ .navlink{font-size:12px;min-height:44px;display:inline-flex;align-items:center;text-align:right;border:0}
+ .intro{gap:16px;padding:28px 0}.intro h1{font-size:clamp(30px,8.8vw,40px);line-height:1.5;margin-bottom:14px;letter-spacing:0}
+ .intro p{font-size:16px;line-height:1.85}.intro-side p{font-size:14px;line-height:1.8}
+ .intro-side .smallmap{font-size:14px;min-height:44px;margin-top:6px}
+ .explore{padding-top:22px}.tools{gap:14px;margin-bottom:18px}
+ h2{font-size:21px}.search{min-height:48px;padding:6px 0;gap:10px}
+ .search input{font-size:16px;min-height:36px;width:100%}
+ .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:20px}
+ .filter{min-height:46px;padding:10px 12px;gap:7px;font-size:14px;line-height:1.5;white-space:nowrap}
+ .filter .count{margin-left:auto;font-size:13px}.filter .dot{width:8px;height:8px}
+ .color-section{padding:18px 0 20px;margin-bottom:0}.color-heading{gap:12px;margin-bottom:8px}
+ .color-heading h3{font-size:16px}.color-heading .reset{min-height:44px;padding:8px 4px;font-size:13px;white-space:nowrap}
+ .color-help{font-size:13px;line-height:1.8;max-width:none;margin-bottom:14px}
+ .color-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .color-filter{min-height:46px;padding:9px 8px;gap:6px;font-size:14px;line-height:1.5;white-space:nowrap}
+ .color-filter .count{margin-left:auto;font-size:12px}.color-filter .swatch{width:12px;height:12px}
+ .results-bar{position:sticky;top:0;z-index:3;display:flex;flex-wrap:wrap;gap:2px 12px;background:var(--paper);padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}
+ .results-bar>span:first-child{flex:1 1 180px}.results-bar>span:last-child{font-size:12px}
+ .entry{padding:20px 0 16px}.entry-top{gap:12px;margin-bottom:5px;align-items:flex-start}
+ .entry-top .category{font-size:13px}.kind{font-size:13px;line-height:1.6;max-width:50%}
+ details summary{min-height:48px;gap:14px;font-size:20px;line-height:1.6;padding:5px 0 10px;align-items:flex-start}
+ details summary .plus{width:28px;min-width:28px;line-height:32px;text-align:center}
+ .description{font-size:16px;line-height:1.85;margin-bottom:10px}
+ .detail{font-size:16px;line-height:1.85;padding:16px;margin-bottom:14px}
+ .detail a{display:inline-block;padding-block:8px}.palette-detail small{font-size:13px;line-height:1.8}
+ .shop-palette{gap:7px;font-size:13px;line-height:1.8;margin:10px 0}
+ .shop-palette .swatch{width:12px;height:12px}.palette-type{font-size:12px;margin-left:0}
+ .entry-bottom{font-size:13px;gap:10px;flex-wrap:wrap}.region{flex:1 1 150px}
+ .entry-bottom a{font-size:14px;min-height:44px;white-space:nowrap}
+ .empty{padding:40px 0}.empty h3{font-size:21px}.empty .reset{min-height:44px;padding:8px 2px}
+ footer{gap:18px;margin-top:36px;padding-bottom:max(28px,env(safe-area-inset-bottom));font-size:13px;line-height:1.85}
+ footer>.source-link{align-self:flex-start;min-height:44px;display:inline-flex;align-items:center}
+}
+@media(max-width:359px){
+ .wrap{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+ .brand{font-size:13px;gap:7px}.navlink{font-size:12px}.mark{width:22px;height:22px}
+ .color-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .entry-bottom .region{flex-basis:140px}
+}
+@media(pointer:coarse){.filter,.color-filter,summary,.entry-bottom a,.smallmap,.reset{min-height:44px}}
 </style></head>
 <body><div class="wrap">
 <header><a class="brand" href="#" aria-label="舊城慢慢逛首頁"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>舊城慢慢逛</a><a class="navlink source-link" target="_blank" rel="noopener noreferrer">原始地圖清單 ↗</a></header>
@@ -126,7 +185,7 @@ function render(){
  const shown=data.filter(d=>baseMatches(d)&&matchesColor(d));drawColors();
  document.getElementById('clear-filters').disabled=active==='all'&&activeColor==='all'&&!search.value;
  document.getElementById('result-count').innerHTML='<strong>'+categories.find(c=>c[0]===active)[1]+'</strong>'+(activeColor!=='all'?' · '+colorGroups.find(c=>c[0]===activeColor)[1]:'')+' · '+shown.length+' 個地點';
- document.getElementById('entries').innerHTML=shown.length?shown.map(d=>{const name=esc(d[0]),cat=categories.find(c=>c[0]===d[1])[1],p=paletteFor(d);return '<article class="entry" style="--tone:var(--'+d[1]+')"><div class="entry-top"><span class="category"><span class="dot" aria-hidden="true"></span>'+cat+'</span><span class="kind">'+esc(d[2])+'</span></div><details><summary>'+name+'<span class="plus" aria-hidden="true">+</span></summary><div class="detail"><p>'+name+'在本頁整理的類型是「'+esc(d[2])+'」。可開啟 Google 地圖查看店家相片、詳細地址與最新營業資訊。</p>'+(d[5]?'<p class="note">'+esc(d[5])+'</p>':'')+'<div class="palette-detail"><p><strong>色系參考：'+p.type+'</strong><br>'+esc(p.note)+'</p><p><small>依 2026.10.22 地圖主要照片視覺判讀，色票為近似示意，非官方標準色。</small></p><p><a href="'+mapLink(d)+'" target="_blank" rel="noopener noreferrer">查看地圖相片來源 ↗</a></p></div></div></details><p class="description">'+esc(d[3])+'</p>'+paletteRow(d)+'<div class="entry-bottom"><span class="region">'+(d[4]?esc(d[4])+' · 原清單收錄':'原地圖清單收錄')+'</span><a href="'+mapLink(d)+'" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖查詢 '+name+'">查看地圖 '+arrow+'</a></div></article>';}).join(''):'<div class="empty"><h3>這個組合，暫時沒有店家</h3><p>試試其他色系或分類，也可以清除搜尋重新找找。</p><button type="button" class="reset" id="reset">清除條件，顯示全部店家</button></div>';
+ document.getElementById('entries').innerHTML=shown.length?shown.map(d=>{const name=esc(d[0]),cat=categories.find(c=>c[0]===d[1])[1],p=paletteFor(d);return '<article class="entry" style="--tone:var(--'+d[1]+')"><div class="entry-top"><span class="category"><span class="dot" aria-hidden="true"></span>'+cat+'</span><span class="kind">'+esc(d[2])+'</span></div><details><summary><span class="shop-name">'+name+'</span><span class="plus" aria-hidden="true">+</span></summary><div class="detail"><p>'+name+'在本頁整理的類型是「'+esc(d[2])+'」。可開啟 Google 地圖查看店家相片、詳細地址與最新營業資訊。</p>'+(d[5]?'<p class="note">'+esc(d[5])+'</p>':'')+'<div class="palette-detail"><p><strong>色系參考：'+p.type+'</strong><br>'+esc(p.note)+'</p><p><small>依 2026.10.22 地圖主要照片視覺判讀，色票為近似示意，非官方標準色。</small></p><p><a href="'+mapLink(d)+'" target="_blank" rel="noopener noreferrer">查看地圖相片來源 ↗</a></p></div></div></details><p class="description">'+esc(d[3])+'</p>'+paletteRow(d)+'<div class="entry-bottom"><span class="region">'+(d[4]?esc(d[4])+' · 原清單收錄':'原地圖清單收錄')+'</span><a href="'+mapLink(d)+'" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖查詢 '+name+'">查看地圖 '+arrow+'</a></div></article>';}).join(''):'<div class="empty"><h3>這個組合，暫時沒有店家</h3><p>試試其他色系或分類，也可以清除搜尋重新找找。</p><button type="button" class="reset" id="reset">清除條件，顯示全部店家</button></div>';
  document.getElementById('end').classList.toggle('hidden',!shown.length);const reset=document.getElementById('reset');if(reset)reset.onclick=clearAll;
 }
 function clearAll(){active='all';activeColor='all';search.value='';drawFilters();render();search.focus();}
